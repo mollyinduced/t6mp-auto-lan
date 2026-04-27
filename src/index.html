@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plutonium LAN Launcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <div class="dragRegion" aria-hidden="true"></div>
+      <div class="windowControls">
+        <button id="minimizeButton" class="windowButton" type="button" aria-label="Minimize">_</button>
+        <button id="closeButton" class="windowButton" type="button" aria-label="Close">X</button>
+      </div>
+      <section class="panel">
+        <p class="eyebrow">MDMA.RIP | PLUTONIUM T6MP</p>
+        <h1>LAN Launcher</h1>
+        <p class="subtitle">Made easy, and for dummies.</p>
+
+        <label class="field" for="username">
+          <span>Username</span>
+          <input id="username" name="username" type="text" maxlength="24" autocomplete="off" />
+        </label>
+
+        <label class="toggle" for="autoStart">
+          <input id="autoStart" name="autoStart" type="checkbox" />
+          <span>Auto-start on app launch</span>
+        </label>
+
+        <label class="toggle" for="closeOnLaunch">
+          <input id="closeOnLaunch" name="closeOnLaunch" type="checkbox" />
+          <span>Close launcher after game starts</span>
+        </label>
+
+        <div class="actionRow">
+          <button id="playButton" type="button">Play</button>
+          <button id="cancelAutoStartButton" class="secondaryButton" type="button" hidden>Cancel Auto-start</button>
+        </div>
+
+        <div class="statusWrap">
+          <p class="statusLabel">Status</p>
+          <p id="status" class="status">Ready.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
